@@ -1,0 +1,38 @@
+.Attempt {
+  display: flex;
+  gap: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.errorAnswer {
+  animation: horizontal-shaking 400ms 1;
+}
+
+.errorAnswer input {
+  color: rgb(181, 49, 49);
+}
+
+.sendButton {
+  border: none;
+  background-color: var(--finded-position-letter-color);
+  cursor: pointer;
+  border-radius: 0.4rem;
+}
+
+@keyframes horizontal-shaking {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(5px);
+  }
+  50% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

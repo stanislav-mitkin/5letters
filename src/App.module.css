@@ -1,0 +1,61 @@
+.App {
+  text-align: center;
+  background-color: black;
+  min-height: 100vh;
+  color: #fff;
+  text-align: left;
+}
+
+.header {
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.logo {
+  width: 10rem;
+}
+
+.container {
+  max-width: var(--max-container-width);
+  margin: auto;
+  background-color: #242424;
+  padding: 2rem;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+}
+
+.game {
+  width: 50%;
+}
+
+.rules {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.rulesTitle {
+  font-weight: 500;
+  color: var(--finded-position-letter-color);
+  margin-top: 0;
+}
+
+.yellow {
+  color: var(--finded-position-letter-color);
+}
+
+.word {
+  display: flex;
+  gap: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin: 0 0 1rem 0;
+}

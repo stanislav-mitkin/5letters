@@ -1,0 +1,58 @@
+.letter {
+  width: 2.5rem;
+  box-sizing: border-box;
+  display: inline-flex;
+  background-color: var(--default-letter-color);
+  color: #fff;
+  padding: 0.25rem 0.5rem;
+  font-size: 1.5rem;
+  border-radius: 0.4rem;
+  justify-content: center;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+}
+
+.input {
+  border: solid 0.0625rem var(--finded-position-letter-color);
+  background-color: black;
+}
+
+.input:focus {
+  border-color: #fff;
+  outline: none;
+}
+
+.not-finded {
+  border-color: transparent;
+  background-color: var(--default-letter-color);
+  color: #fff;
+}
+
+.finded {
+  background-color: var(--finded-letter-color);
+  color: black;
+  border-color: transparent;
+}
+
+.finded-position {
+  background-color: var(--finded-position-letter-color);
+  color: black;
+  border-color: transparent;
+}
+
+.finded-position:focus {
+  border-color: transparent;
+}
+
+.animation {
+  animation: rotateAnimation 1s 1;
+}
+
+@keyframes rotateAnimation {
+  50% {
+    transform: rotateY(90deg);
+  }
+}

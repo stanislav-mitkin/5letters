@@ -1,7 +1,7 @@
 {
-  "name": "vite-template-solid",
+  "name": "5letters-game",
   "version": "0.0.0",
-  "description": "",
+  "description": "A game in which you have to guess the word",
   "scripts": {
     "start": "vite",
     "dev": "vite",

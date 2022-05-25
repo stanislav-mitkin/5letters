@@ -13,26 +13,20 @@ interface DiffResult {
   lines: DiffLine[];
 }
 
-const currentDay = new Date();
-const d =
-  currentDay.getDate() < 10 ? `${currentDay.getDate()}0` : currentDay.getDate();
-const m =
-  currentDay.getMonth() < 10
-    ? `${currentDay.getMonth()}0`
-    : currentDay.getMonth();
-const y = currentDay.getFullYear().toString().slice(-2);
+const getDateNumber = () => {
+  const currentDay = new Date();
+  const d = currentDay.getDate();
+  const m = currentDay.getMonth();
 
-const DAY_NUMBER = Number(`${d}${m}${y}`);
+  const DAY_NUMBER = Number(`${d}${m + 1}`);
+  return DAY_NUMBER;
+};
+
 const word5 = dict.filter((word) => word.length === 5);
+const totalWords = word5.length;
 
-const totalNumber = word5.length;
-
-const wordKey =
-  totalNumber / DAY_NUMBER > 0.01
-    ? totalNumber / DAY_NUMBER
-    : totalNumber / Number(String(DAY_NUMBER).slice(0, 4));
-
-const WORD = word5?.[Math.floor(wordKey * totalNumber)];
+const WORD =
+  word5?.[getDateNumber() > totalWords ? totalWords / 2 : getDateNumber()];
 
 export default (request: VercelRequest, response: VercelResponse) => {
   if (request.method === "POST") {

@@ -32,7 +32,7 @@ const wordKey =
     ? totalNumber / DAY_NUMBER
     : totalNumber / Number(String(DAY_NUMBER).slice(0, 4));
 
-const WORD = word5?.[Math.floor(wordKey)];
+const WORD = word5?.[Math.floor(wordKey * totalNumber)];
 
 export default (request: VercelRequest, response: VercelResponse) => {
   if (request.method === "POST") {
